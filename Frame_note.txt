@@ -1,0 +1,27 @@
+
+//ReadDword
+String   cmd = "";
+
+cmd = cmd + "5000"  ; //  sub header 
+
+cmd = cmd + "00"    ; //  network no 
+
+cmd = cmd + "FF"    ; //  PLC NUMBER
+ 
+cmd = cmd + "03FF"  ; //  DEMAND OBJECT MUDULE I/O NUMBER
+
+cmd = cmd + "00"    ; //  DEMAND OBJECT MUDULE station no
+
+cmd = cmd + "0018"  ; //  Length of demand data
+
+cmd = cmd + "0008"  ; //  monitoring timer
+
+cmd = cmd + "0401"  ; //  Read command (to read the data from PLC we should "0401"
+
+cmd = cmd + "0000"  ; //  Sub command
+
+cmd = cmd + "D*"    ; //  device code
+
+cmd = cmd + "000050"; //  start address of D device
+
+cmd = cmd + "0001";   //  number of device
